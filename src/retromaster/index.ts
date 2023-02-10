@@ -10,8 +10,8 @@ const config = {
 
 (async () => {
   const zulip = await zulipInit(config);
-  const streamId = process.env.STREAM_ID;
-  const streamName = process.env.STREAM_NAME;
+  const streamId = process.env.ZULIP_STREAM_ID;
+  const streamName = process.env.ZULIP_STREAM_NAME;
 
   await retromasterBot(zulip, streamId!, streamName!);
 })();
