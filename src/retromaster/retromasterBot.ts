@@ -13,7 +13,7 @@ const sendMessage = (zulip: any, streamName: string, content: string) =>
     content,
   });
 
-const getUsersFromStream = async (zulip: Zulip, streamId: number) => {
+const getUsersFromStream = async (zulip: Zulip, streamId: string) => {
   try {
     const users: StreamData = await zulip.callEndpoint(
       `/streams/${streamId}/members`,
@@ -42,7 +42,7 @@ const getUserData = async (zulip: Zulip, userId: number) => {
   }
 };
 
-const retromasterBot = async (zulip: Zulip, streamId: number, streamName: string) => {
+const retromasterBot = async (zulip: Zulip, streamId: string, streamName: string) => {
   try {
     const randomUser: User = await getUserData(
       zulip,

@@ -13,6 +13,9 @@ declare module "zulip-js" {
   }
 
   export default function zulipInit(options: {
-    zuliprc: string;
+    zuliprc?: string;
+    username?: string;
+    apiKey?: string;
+    realm?: string;
   }): Promise<Zulip>;
 }

@@ -7,10 +7,14 @@ describe("Retromaster Bot", () => {
   let zulip: Zulip;
 
   beforeEach(async () => {
-    zulip = await zulipInit({ zuliprc: ".zuliprc" });
+    zulip = await zulipInit({
+      username: process.env.ZULIP_USERNAME,
+      apiKey: process.env.ZULIP_API_KEY,
+      realm: process.env.ZULIP_REALM,
+    });
   });
 
-  const streamId = 2137;
+  const streamId = '2137';
   const subscribers = [12345];
   const userFullName = "Ivan";
 

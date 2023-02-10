@@ -6,7 +6,6 @@
   "scripts": {
     "prebuild": "rm -rf ./dist",
     "build": "tsc",
-    "postbuild": "cp .zuliprc ./dist/",
     "test": "jest "
   },
   "keywords": [],
